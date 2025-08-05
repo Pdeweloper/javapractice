@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-class StackbyArray
+class QueuebyArray
 {
 public static void main(String...x)
 {
 Scanner sc = new Scanner(System.in);
-int arr[] = new int[10];  //stack size fixed
+int arr[] = new int[10];  //queue size fixed
 int op=0,tolnum=0; //taking op-option , tolnum-to count total inserted number;
 
 while(op!=4)
 {
-System.out.print("Choose Option : \n1.Push\n2.Pop\n3.Display Elements\n4.Exit\n");
+System.out.print("Choose Option : \n1.Enqueue\n2.Dequeue\n3.Display Elements\n4.Exit\n");
 System.out.print("Enter Option : ");
 op=sc.nextInt(); //taking option.
 
@@ -23,7 +23,7 @@ switch(op)
 
     if(tolnum>10)
     {
-       System.out.print("Stack Overflow..."); 
+       System.out.print("Queue Overflow Error.."); 
        System.out.println();
        continue;
     }
@@ -40,12 +40,13 @@ switch(op)
     System.out.print("Enter position : ");
     int pos = sc.nextInt();
     arr[pos] = 0;
+    System.out.print("Deleted Successfully...");
     System.out.println();
     System.out.println();
     break;
 
     case 3:
-    for(int j=tolnum;j>=0;j--)
+    for(int j=0;j<tolnum;j++)
     {
         if(arr[j]==0)
        continue;
@@ -62,7 +63,7 @@ switch(op)
     break;
 
     default :
-    System.out.print("Invalid Option");
+    System.out.print("Invalid Option , Choose Correct option");
     System.out.println();
     System.out.println();
     break;
@@ -79,15 +80,15 @@ switch(op)
 case 1 :- 
  taking nums of elements to insert. 
  counting total inserted element.
- if(tolcount>10) stack overflow and continue. 
+ if(tolcount>10) queue overflow and continue. 
 
 case 2 :-
  taking position(index) to delete element.
  replacing given index value with 0.
 
 case 3 :-
- displaying tolcount to 0 index array elemnt.
- print element reverse because Stack is (Last in first out)
+ displaying 0 to tolnum index array elemnt.
+ print element in order because Queue is (first in first out)
 
 case 4 :-
  when op==4 while condition false and loop(program) end.
