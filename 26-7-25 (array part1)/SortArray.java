@@ -4,12 +4,14 @@ public static void main(String...x)
 {
 int arr[]={1,2,5,9,7,3,6};
 
+ //this loop is only used print unsorted array.
 System.out.print("Before Sort Array was : ");
 for(int j=0;j<arr.length;j++)
 {
  System.out.print(arr[j]+" ");
 }
 
+ //this loop is used to sort array 
 int i=0;
 while(i<arr.length-1)
 {
@@ -25,7 +27,7 @@ while(i<arr.length-1)
     i++;
 } 
 
-
+ //this loop is only used print sorted array.
 System.out.print("\nAfter Sort Array is : ");
 for(int k=0;k<arr.length;k++)
 {
@@ -34,3 +36,4 @@ for(int k=0;k<arr.length;k++)
 
 }
 }
+
