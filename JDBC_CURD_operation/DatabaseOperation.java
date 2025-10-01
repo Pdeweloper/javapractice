@@ -10,7 +10,7 @@ public class DatabaseOperation {
 	
 	static void connection() throws SQLException
 	{
-		conn = driver.getConnection("jdbc:mysql://localhost:3306/shiva_concept", "root", "Prabhas@29#1");
+		conn = driver.getConnection("jdbc:mysql://localhost:3306/shiva_concept", "root", "Password");
 		st = conn.createStatement();
 	}
 	
@@ -73,3 +73,4 @@ public class DatabaseOperation {
 	}
 
 }
+
