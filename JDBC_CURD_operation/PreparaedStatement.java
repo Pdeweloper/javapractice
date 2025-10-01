@@ -9,7 +9,7 @@ public class PreparaedStatement {
 	
 	static void connect() throws SQLException
 	{
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shiva_concept","root","Prabhas@29#1");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shiva_concept","root","Password");
 	}
 	
 	//ye insert karne ka function he using preparedStatement.
@@ -87,3 +87,4 @@ public class PreparaedStatement {
 	}
 
 }
+
