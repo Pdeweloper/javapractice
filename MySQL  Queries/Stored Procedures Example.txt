@@ -1,0 +1,44 @@
+
+"Stored Procedures"
+
+1.->ye insert stored procedure he
+CREATE PROCEDURE InsertCourse(
+in cid int,
+in cname varchar(50)
+)
+BEGIN
+ insert into course values(cid,cname);
+END
+
+2.->ye insert stored procedure he
+CREATE PROCEDURE UpdateCourse(
+in cid int,
+in cname varchar(50)
+)
+BEGIN
+update course set course_name=cname where course_id=cid;
+END
+
+3.->ye Delete stored procedure he
+CREATE PROCEDURE DeleteCourse(
+in cid int,
+)
+BEGIN
+delete from course where course_id=cid;
+END
+
+4.->ye select stored procedure he
+CREATE PROCEDURE GetAll()
+BEGIN
+select * from course;
+END
+
+
+"Call Stored Procedures"
+
+call InsertCourse(10,"Azure");
+call UpdateCourse(10,"Azure-update");
+call GetAll();
+call DeleteCourse(10);
+
+
